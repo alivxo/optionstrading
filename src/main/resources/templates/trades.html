@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trades</title>
+</head>
+<body>
+<h1>Trades</h1>
+<table>
+    <tr>
+        <th>Symbol</th>
+        <th>Trade Date</th>
+        <th>Trade Price</th>
+        <th>Quantity</th>
+        <th>Trade Type</th>
+        <th>Commission</th>
+    </tr>
+    <tr th:each="trade : ${trades}">
+        <td th:text="${trade.symbol}"></td>
+        <td th:text="${trade.tradeDate}"></td>
+        <td th:text="${trade.tradePrice}"></td>
+        <td th:text="${trade.quantity}"></td>
+        <td th:text="${trade.tradeType}"></td>
+        <td th:text="${trade.commission}"></td>
+    </tr>
+</table>
+</body>
+</html>
