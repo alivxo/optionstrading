@@ -1,0 +1,76 @@
+{
+  "User": {
+    "user_id": 101,
+    "username": "optionTrader01",
+    "email": "trader01@example.com",
+    "password_hash": "hashed_pw_123",
+    "account_balance": 5000.75,
+    "created_at": "2025-04-01T08:00:00Z"
+  },
+  "Account": {
+    "account_id": 4001,
+    "user_id": 101,
+    "account_type": "Margin",
+    "created_at": "2024-01-10T15:00:00Z"
+  },
+  "OptionContract": {
+    "option_id": 2001,
+    "symbol": "AAPL240419C00180000",
+    "underlying_symbol": "AAPL",
+    "option_type": "Call",
+    "strike_price": 180,
+    "expiration_date": "2024-04-19",
+    "multiplier": 100,
+    "created_at": "2024-03-01T12:00:00Z"
+  },
+  "Order": {
+    "order_id": 1001,
+    "user_id": 101,
+    "option_id": 2001,
+    "order_type": "Buy",
+    "order_status": "Pending",
+    "price": 2.5,
+    "quantity": 10,
+    "created_at": "2025-04-08T09:00:00Z",
+    "updated_at": "2025-04-08T09:01:00Z"
+  },
+  "Execution": [
+    {
+      "execution_id": 3001,
+      "order_id": 1001,
+      "execution_price": 2.45,
+      "execution_time": "2025-04-08T09:02:00Z",
+      "quantity_filled": 5
+    },
+    {
+      "execution_id": 3002,
+      "order_id": 1001,
+      "execution_price": 2.55,
+      "execution_time": "2025-04-08T09:04:00Z",
+      "quantity_filled": 5
+    }
+  ],
+  "OrderAudit": [
+    {
+      "audit_id": 5001,
+      "order_id": 1001,
+      "action": "Submitted",
+      "timestamp": "2025-04-08T09:00:00Z",
+      "performed_by": "system"
+    },
+    {
+      "audit_id": 5002,
+      "order_id": 1001,
+      "action": "Partially Filled",
+      "timestamp": "2025-04-08T09:02:00Z",
+      "performed_by": "system"
+    },
+    {
+      "audit_id": 5003,
+      "order_id": 1001,
+      "action": "Fully Filled",
+      "timestamp": "2025-04-08T09:04:00Z",
+      "performed_by": "system"
+    }
+  ]
+}
